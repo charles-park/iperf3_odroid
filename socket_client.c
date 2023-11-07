@@ -83,6 +83,7 @@ static int client_loop (int s_fd, char *s_ip, int reverse)
     while (1) {
         if ((r_cnt = read (s_fd, buf, sizeof(buf)))) {
             if (!strncmp (buf, "iperf3_run", strlen("iperf3_run")-1)) {
+		usleep (100 * 1000);
                 mbits = ethernet_iperf3 (s_ip, reverse ? "receiver" : "sender");
                 // iperf3 result
                 printf ("MBytes %d Mbits/sec %s\n", mbits, reverse ? "receiver" : "sender");
