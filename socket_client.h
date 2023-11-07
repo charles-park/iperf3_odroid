@@ -23,7 +23,8 @@
 #define BACK_LOG_COUNT  3
 
 //------------------------------------------------------------------------------
-extern  int socket_client (int port, char *s_ip);
+extern  int socket_client (int port, char *s_ip, int reverse);
+
 //------------------------------------------------------------------------------
 
 #endif // __SOCKET_CLIENT_H__
