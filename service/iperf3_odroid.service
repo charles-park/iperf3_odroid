@@ -18,9 +18,9 @@ Type=simple
 User=root
 
 # github에서 내려 받은 폴더를 기록하도록 한다. (실행 파일폴더)
-WorkingDirectory=/root/JIG.m1s.server
+WorkingDirectory=/root/iperf3_odroid
 
-ExecStart=/root/JIG.m1s.server/service/jig-service.sh
+ExecStart=/root/iperf3_odroid/service/iperf3_odroid.sh
 
 [Install]
 WantedBy=multi-user.target
