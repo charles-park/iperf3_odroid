@@ -31,6 +31,13 @@ $(TARGET): $(OBJS)
 %.o: %.c
     $(CC) $(CFLAGS) -c $< -o $@
 
+install :
+    @chmod 755 $(TARGET)
+    @cp $(TARGET) /usr/bin/
+
+uninstall :
+    @rm -f /usr/bin/$(TARGET)
+
 clean :
-    rm -f $(OBJS)
-    rm -f $(TARGET)
+    @rm -f $(OBJS)
+    @rm -f $(TARGET)
