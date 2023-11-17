@@ -7,7 +7,7 @@ iperf3 for odroid jig
 * socket통신을 구현하여 접속되어진 순서대로 iperf3를 실행함.
 * server의 경우 socket을 통하여 "iperf3" 요청되면 iperf3 server를 실행후 "iperf3_run"으로 응답함. iperf3가 실행중에는 대기열에 대기하도록 함.
 * client의 경우 소켓을 통하여 "iperf3" 값을 보내고 "iperf3_run" 응답이 올때까지 일정시간 대기하며 응답을 받은경우 iperf3 client를 실행하여 속도를 구함.
-* app build 후 755 mode로 /usr/bin에 복사하여 어디서든 호출될 수 있도록 함.
+* make install을 통하여 binary파일을 755 mode로 /usr/bin에 복사하여 어디서든 호출될 수 있도록 함.
 * server모드의 경우 자동으로 실행되는 service를 설치하도록 함.
 
 ```
